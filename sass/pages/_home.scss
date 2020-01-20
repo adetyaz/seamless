@@ -1,0 +1,67 @@
+.home-section {
+    background-image: url("../../imgs/header background.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 3rem 0;
+    overflow: hidden;
+    z-index: 5;
+    margin-bottom: 10rem;
+    // @media screen and (max-width: 1100px) {
+    //     padding: 3rem 3rem;
+    // }
+    // animation: waves 3s linear infinite;
+}
+
+.values-section {
+    margin: 5rem 0;
+    padding: 5rem 5rem;
+    background-color: $color-white;
+}
+
+.friendly-section {
+    margin-top: 15rem;
+    padding: 5rem 5rem;
+    background-image: url("../../imgs/phone background.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 600px) {
+        margin-left: 0;
+        margin-bottom: 10rem;
+        padding: 0 5rem;
+    }
+}
+
+.features-section {
+    padding: 5rem 5rem;
+    background-image: url("../../imgs/patterned background.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    @media screen and (max-width: 960px) {
+        padding: 5rem 3rem;
+    }
+}
+
+.pricing-section {
+    margin: 6rem 2rem;
+    padding: 2rem 3rem;
+    background-color: $color-white;
+}
+
+.document-section {
+    padding: 5rem 20rem;
+    background-image: url("../../imgs/cloud background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media screen and (max-width: 600px) {
+        padding: 5rem 0;
+    }
+}
+
+.subscribe-section {
+    padding: 10rem 3rem;
+    background-color: $color-white;
+}

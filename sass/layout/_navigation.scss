@@ -1,0 +1,172 @@
+    .nav {
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+        &__items {
+            margin: 3rem 0;
+            display: flex;
+        }
+        &__list {
+            list-style: none;
+        }
+        &__link,
+        &__link:link,
+        &__link:visited {
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-right: 4rem;
+            color: $color-white;
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+            &::before,
+            &::after {
+                transition: all .7s;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                margin: auto;
+                top: 1.9rem;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                color: transparent;
+                background-color: $color-light-gr;
+                height: .3rem;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+    
+    .toggle {
+        transition: all 2s;
+        margin: 3.5rem auto;
+        position: fixed;
+        left: 90%;
+        &.animate {
+            transition: transform 2s;
+            transform: rotate(220deg);
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 1rem;
+        }
+        &::before:hover {
+            transition: transform 1s;
+            transform: translateY(2px);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 1rem;
+        }
+        &::after:hover {
+            transition: transform 1s;
+            transform: translateY(-2px);
+        }
+    }
+    
+    .toggle,
+    .toggle::before,
+    .toggle::after {
+        cursor: pointer;
+        height: .4rem;
+        width: 3rem;
+        display: block;
+        z-index: 20;
+        background-color: $color-light;
+        border-radius: .15rem;
+        @media screen and (min-width: 600px) {
+            display: none;
+        }
+    }
+    
+    .toggle.animate::before {
+        top: 0;
+        transform: rotate(86deg);
+        transition: top 2s, transfrom 2s;
+    }
+    
+    .mobile-nav {
+        background-color: $color-secondary;
+        height: 700%;
+        width: 100vw;
+        z-index: 16;
+        position: relative;
+        right: 150%;
+        transition: all 2s;
+        &.slide {
+            right: 0;
+        }
+        &__items {
+            margin-top: 45rem;
+        }
+        &__list {
+            list-style: none;
+        }
+        &__link,
+        &__link:link,
+        &__link:visited {
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+            color: $color-white;
+            position: relative;
+            display: block;
+            text-align: center;
+            //&::before,
+            &::after {
+                transition: all .2s;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                margin: auto;
+                top: 1.9rem;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                color: transparent;
+                background-color: $color-light-gr;
+                height: .3rem;
+                text-align: left;
+            }
+            &:hover::after {
+                animation: fill 2s forwards;
+            }
+        }
+    }
+    
+    // @keyframes slidein {
+    //     0% {
+    //     }
+    //     100% {
+    //         right: 0;
+    //     }
+    // }
+    @keyframes fill {
+        0% {
+            width: 0%;
+            height: 1px;
+        }
+        50% {
+            width: 10%;
+            height: 1px;
+        }
+        100% {
+            width: 25%;
+            height: 130%;
+            // color: $color-primary;
+        }
+    }
